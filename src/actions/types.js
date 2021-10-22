@@ -1,0 +1,56 @@
+export const GET_ERRORS = "GET_ERRORS";
+export const CREATE_MESSAGE = "CREATE_MESSAGE";
+export const USER_LOADING = "USER_LOADING";
+export const USER_LOADED = "USER_LOADED";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+
+// Profiles
+export const GET_GUIDES = "GET_GUIDES";
+export const SET_RATINGS = "SET_RATINGS";
+
+export const GET_PROFILE = "GET_PROFILE";
+export const PROFILE_LOADING = "PROFILE_LOADING";
+export const CLEAR_CURRENT_PROFILE = "CLEAR_CURRENT_PROFILE";
+export const GET_PROFILES = "GET_PROFILES";
+export const CLEAR_PROFILES = "CLEAR_PROFILES";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
+export const GET_EVENTS = "GET_EVENTS";
+export const ADD_EVENT = "ADD_EVENT";
+export const GET_EVENT = "GET_EVENT";
+export const DELETE_EVENT = "DELETE_EVENT";
+export const EVENT_LOADING = "EVENT_LOADING";
+export const CLEAR_EVENTS = "CLEAR_EVENTS";
+export const CLEAR_EVENT = "CLEAR_EVENT";
+
+export const GET_PAGAMENTOS = "GET_PAGAMENTOS";
+export const GET_PAGAMENTO = "GET_PAGAMENTO";
+export const ADD_PAGAMENTO = "ADD_PAGAMENTO";
+export const CLEAR_PAGAMENTOS = "CLEAR_PAGAMENTOS";
+export const CLEAR_PAGAMENTO = "CLEAR_PAGAMENTO";
+export const DELETE_PAGAMENTO = "DELETE_PAGAMENTO";
+export const PAGAMENTO_LOADING = "PAGAMENTO_LOADING";
+export const GET_HISTORICO = "GET_HISTORICO";
+export const GET_RESUMO = "GET_RESUMO";
+
+export const ADD_EXPERIMENTAL = "ADD_EXPERIMENTAL";
+export const ADD_AVULSA = "ADD_AVULSA";
+export const ADD_PERSONAL = "ADD_PERSONAL";
+export const GET_PAGAMENTO_PROFESSORES = "GET_PAGAMENTO_PROFESSORES";
+
+//ORDERS
+export const GET_ORDERS = "GET_ORDERS";
+export const GET_ORDER = "GET_ORDER";
+export const ADD_ORDER = "ADD_ORDER";
+export const CLEAR_ORDERS = "CLEAR_ORDERS";
+export const CLEAR_ORDER = "CLEAR_ORDER";
+export const ORDER_LOADING = "ORDER_LOADING";
+export const DELETE_ORDER = "DELETE_ORDER";
+export const IS_THERE_MORE_DATA = "IS_THERE_MORE_DATA";
