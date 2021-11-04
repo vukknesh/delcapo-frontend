@@ -20,12 +20,7 @@ const Dashboard = ({ logout, auth, children }) => {
   const [conteudo, setConteudo] = useState(1);
   const [aniversariantes, setAniversariantes] = useState([]);
   const [count, setCount] = useState(0);
-  useEffect(() => {
-    Axios.get(api + "/api/aniversariantes/").then((res) => {
-      setAniversariantes(res.data?.results);
-      setCount(res.data?.count);
-    });
-  }, []);
+
   const handleMenuClick = (e) => {
     if (e.key === "3") {
       setMenuVisible(false);
@@ -81,27 +76,7 @@ const Dashboard = ({ logout, auth, children }) => {
           />
         </div>
         <p style={{ color: "white" }}>PIZZA DEL CAPO</p>
-        <Modal
-          visible={visible}
-          title="Aniversariantes"
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            {!aniversariantes.length && (
-              <span>Nenhum aniversariante hoje!</span>
-            )}
-            {aniversariantes?.map((a) => (
-              <Link
-                style={{ textDecoration: "underline", marginBottom: "10px" }}
-                to={`/aluno/${a.id}`}
-                onClick={handleCancel}
-              >
-                {a.first_name}
-              </Link>
-            ))}
-          </div>
-        </Modal>
+
         <Dropdown
           overlay={menu}
           onVisibleChange={handleVisibleChange}
@@ -170,12 +145,6 @@ const Dashboard = ({ logout, auth, children }) => {
                     <Icon type="rise" />
                     Resumo Mensal
                   </Link>
-                </Menu.Item>
-                <Menu.Item key="10" onClick={showModal}>
-                  <Icon type="schedule" />
-                  <Badge offset={[20, 0]} count={count}>
-                    Aniversariantes
-                  </Badge>
                 </Menu.Item>
               </Menu.ItemGroup>
             )}

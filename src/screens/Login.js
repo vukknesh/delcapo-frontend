@@ -22,7 +22,7 @@ class Login extends React.Component {
   };
   renderRedirect = (auth) => {
     if (auth.isAuthenticated) {
-      return <Redirect to="/landing" />;
+      return <Redirect to="/gerenciar-pedidos" />;
     }
   };
 

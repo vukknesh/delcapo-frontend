@@ -4,6 +4,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 import StyledSpinner from "./utils/StyledSpinner";
 const Login = lazy(() => import("./screens/Login"));
 const Dashboard = lazy(() => import("./screens/Dashboard"));
+const GerenciarPedidos = lazy(() => import("./components/GerenciarPedidos"));
 const BaseRouter = () => {
   return (
     <Suspense
@@ -25,6 +26,11 @@ const BaseRouter = () => {
         <Route exact path="/" component={Login} />
         <Dashboard>
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute
+            exact
+            path="/gerenciar-pedidos"
+            component={GerenciarPedidos}
+          />
         </Dashboard>
       </Switch>
     </Suspense>

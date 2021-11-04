@@ -64,7 +64,7 @@ export const getOpenOrders = () => (dispatch, getState) => {
   console.log("actions orders", orders);
   dispatch({ type: ORDER_LOADING, payload: true });
   axios
-    .get(api + "/api/pizzas/open-orders/", tokenConfig(getState))
+    .get(api + "/api/pizza/open-orders/", tokenConfig(getState))
     .then((res) => {
       dispatch({
         type: GET_ORDERS,
@@ -94,11 +94,7 @@ export const getOpenOrders = () => (dispatch, getState) => {
 
 export const updateOrder = (orderData, id) => (dispatch, getState) => {
   axios
-    .put(
-      api + `/api/pizzas/order/${id}/edit/`,
-      orderData,
-      tokenConfig(getState)
-    )
+    .put(api + `/api/pizza/order/${id}/edit/`, orderData, tokenConfig(getState))
     .then((res) => {
       message.success("Pedido alterado com sucesso!");
       dispatch(getOpenOrders());
